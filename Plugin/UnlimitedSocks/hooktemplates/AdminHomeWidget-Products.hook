@@ -1,0 +1,22 @@
+<div class="panel-body table-container">
+    <table class="table general-table">
+        <thead>
+            <tr>
+                <th class="hidden-xs hidden-sm">ID</th>
+                <th><?php echo(get_lang('orderproduct'))?></th>
+                <th class="hidden-xs hidden-sm"><?php echo(get_lang('clientareaproductdetails'))?></th>
+                <th><?php echo(get_lang('action'))?></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach($data as $datas){?>
+                <tr>
+                    <td class="hidden-xs hidden-sm"><?php echo($datas['pid'])?></td>
+                    <td><a href="configproducts.php?action=edit&id=<?php echo($datas['pid'])?>"><?php echo($datas['name'])?></a></td>
+                    <td class="hidden-xs hidden-sm"><?php echo($datas['description'])?></td>
+                    <td>-</td>
+                </tr> 
+            <?php }?>   
+        </tbody>
+    </table>
+</div>   
